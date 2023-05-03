@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html lang="es">
+    <head>
+        <title>Challenge Oneツ</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="imagenes/web.ico">
+        <script src="mov.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <img class="logo" src="imagenes/vector.png" alt="logo-alura">
+        <div class="entrada">
+            <textarea class="text" id="texto_entrada" placeholder="Escribe aquí tu mensaje..."></textarea>
+        </div>
+        <div class="rectangulo">
+            <div id="vacio">
+                <img class="muneco" src="imagenes/muneco.png" alt="muneco">
+                <p class="text" id="texto_vacio">Ningun mensaje fue encontrado</p>
+                <p class="text" id="texto_sugerencia">Ingrese el texto que desee encriptar o desencriptar</p>
+            </div>
+            <div id="contenido">
+                <div class="resultado">
+                    <p class="text" id="texto_resultado"></p>
+                </div>
+                <div class="buttons">
+                    <button class="copiar" onclick="copiar()"><p class="text">copiar</p></button>
+                </div>
+            </div>
+        </div>
+        <div class="advisor">
+            <p class="text" id="recomendacion">&#9888;  Ten cuidado con los acentos</p>
+        </div>
+        <div class="buttons">
+            <button class="encriptar" onclick="cifrar_texto()"> <p class="text">Encriptar</p> </button>
+            <button class="desencriptar" onclick="descifrar_texto()"><p class="text">Desencriptar</p></button>
+        </div>
+    </body>
+</html>
