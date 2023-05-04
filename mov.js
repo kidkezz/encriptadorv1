@@ -1,3 +1,4 @@
+//Desarrollado por luis castiblanco
 function cifrar(texto){
     // Objeto con claves y valores para las sustituciones
     const codificador = {"a":"ai","e":"enter","i":"imes","o":"ober","u":"ufat"};
@@ -44,37 +45,79 @@ function decifrar(texto_cifrado){
     return texto_decifrado;
 }
 
+const anchoPantalla =  window.innerWidth;
 
 function cifrar_texto(){
-    let texto = document.getElementById("texto_entrada").value;
-    let texto_resultado = cifrar(texto);
-    document.getElementById("texto_resultado").innerHTML = texto_resultado; 
-    document.getElementById("texto_entrada").value = "";
-    document.getElementById("vacio").style.display = 'none';
-    document.getElementById("contenido").style.display = 'block'
+    if (anchoPantalla >1600 & anchoPantalla<1921){
+        let texto = document.getElementById("texto_entrada-d").value;
+        let texto_resultado = cifrar(texto);
+        document.getElementById("texto_resultado-d").innerHTML = texto_resultado; 
+        document.getElementById("texto_entrada-d").value = "";
+        document.getElementById("vacio-d").style.display = 'none';
+        document.getElementById("contenido-d").style.display = 'block'
+
+    }else if(anchoPantalla >1199 & anchoPantalla<1600){
+        let texto = document.getElementById("texto_entrada-p").value;
+        let texto_resultado = cifrar(texto);
+        document.getElementById("texto_resultado-p").innerHTML = texto_resultado; 
+        document.getElementById("texto_entrada-p").value = "";
+        document.getElementById("vacio-p").style.display = 'none';
+        document.getElementById("contenido-p").style.display = 'block'
+    }
 }
 function descifrar_texto(){
-    let texto = document.getElementById("texto_entrada").value;
-    let texto_resultado = decifrar(texto);
-    document.getElementById("texto_resultado").innerHTML = texto_resultado; 
-    document.getElementById("texto_entrada").value = "";
-    document.getElementById("vacio").style.display = 'none';
-    document.getElementById("contenido").style.display = 'block'
+    if (anchoPantalla >1600 & anchoPantalla<1921){
+        let texto = document.getElementById("texto_entrada-d").value;
+        let texto_resultado = decifrar(texto);
+        document.getElementById("texto_resultado-d").innerHTML = texto_resultado; 
+        document.getElementById("texto_entrada-d").value = "";
+        document.getElementById("vacio-d").style.display = 'none';
+        document.getElementById("contenido-d").style.display = 'block'
+
+    }else if(anchoPantalla >1199 & anchoPantalla<1600){
+        let texto = document.getElementById("texto_entrada-p").value;
+        let texto_resultado = decifrar(texto);
+        document.getElementById("texto_resultado-p").innerHTML = texto_resultado; 
+        document.getElementById("texto_entrada-p").value = "";
+        document.getElementById("vacio-p").style.display = 'none';
+        document.getElementById("contenido-p").style.display = 'block'
+    }
 }
 
 
 
 function copiar() {
-    // Obtener el texto resultado
-    let texto_resultado = document.getElementById("texto_resultado").innerText;
-    // Crear un elemento de tipo textarea para copiar el texto
-    let textarea = document.createElement("textarea");
-    textarea.value = texto_resultado;
-    // Agregar el elemento al DOM y seleccionar el texto
-    document.body.appendChild(textarea);
-    textarea.select();
-    // Copiar el texto seleccionado en el portapapeles
-    document.execCommand("copy");
-    // Remover el elemento del DOM
-    document.body.removeChild(textarea);
+    if (anchoPantalla >1600 & anchoPantalla<1921){
+        // Obtener el texto resultado
+        let texto_resultado = document.getElementById("texto_resultado-d").innerText;
+        let textarea = document.createElement("textarea");
+        textarea.value = texto_resultado;
+            // Agregar el elemento al DOM y seleccionar el texto
+        document.body.appendChild(textarea);
+        textarea.select();
+        // Copiar el texto seleccionado en el portapapeles
+        document.execCommand("copy");
+        // Remover el elemento del DOM
+        document.body.removeChild(textarea);
+
+    }else if(anchoPantalla >1199 & anchoPantalla<1600){
+        // Obtener el texto resultado
+        let texto_resultado = document.getElementById("texto_resultado-p").innerText;
+        let textarea = document.createElement("textarea");
+        textarea.value = texto_resultado;
+        // Agregar el elemento al DOM y seleccionar el texto
+        document.body.appendChild(textarea);
+        textarea.select();
+        // Copiar el texto seleccionado en el portapapeles
+        document.execCommand("copy");
+        // Remover el elemento del DOM
+        document.body.removeChild(textarea);
+    }
 } 
+window.addEventListener("resize", function() {
+    location.reload();
+});
+
+
+// Desarrollado por luis castiblanco 
+
