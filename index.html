@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--Desarrollado por luis castiblanco -->
 <meta charset="UTF-8">
 <html lang="es">
     <head>
@@ -11,31 +12,72 @@
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
     </head>
     <body>
-        <img class="logo" src="imagenes/vector.png" alt="logo-alura">
-        <div class="entrada">
-            <textarea class="text" id="texto_entrada" placeholder="Escribe aquí tu mensaje..."></textarea>
-        </div>
-        <div class="rectangulo">
-            <div id="vacio">
-                <img class="muneco" src="imagenes/muneco.png" alt="muneco">
-                <p class="text" id="texto_vacio">Ningun mensaje fue encontrado</p>
-                <p class="text" id="texto_sugerencia">Ingrese el texto que desee encriptar o desencriptar</p>
-            </div>
-            <div id="contenido">
-                <div class="resultado">
-                    <p class="text" id="texto_resultado"></p>
+        <di class="resolucion">
+            <div class="desktop">
+                <img class="logo" src="imagenes/vector.png" alt="logo-alura">
+                <div class="entrada">
+                    <textarea class="text" id="texto_entrada-d" placeholder="Escribe aquí tu mensaje..."></textarea>
+                </div>
+                <div class="rectangulo">
+                    <div id="vacio-d">
+                        <img class="muneco" src="imagenes/muneco.png" alt="muneco">
+                        <p class="text" id="texto_vacio">Ningun mensaje fue encontrado</p>
+                        <p class="text" id="texto_sugerencia">Ingrese el texto que desee encriptar o desencriptar</p>
+                    </div>
+                    <div id="contenido-d">
+                        <div class="resultado">
+                            <p class="text" id="texto_resultado-d"></p>
+                        </div>
+                        <div class="buttons">
+                            <button class="copiar" onclick="copiar()"><p class="text">copiar</p></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="advisor">
+                    <p class="text" id="recomendacion">&#9888;  Ten cuidado con los acentos</p>
                 </div>
                 <div class="buttons">
-                    <button class="copiar" onclick="copiar()"><p class="text">copiar</p></button>
+                    <button class="encriptar" onclick="cifrar_texto()"> <p class="text">Encriptar</p> </button>
+                    <button class="desencriptar" onclick="descifrar_texto()"><p class="text">Desencriptar</p></button>
                 </div>
             </div>
-        </div>
-        <div class="advisor">
-            <p class="text" id="recomendacion">&#9888;  Ten cuidado con los acentos</p>
-        </div>
-        <div class="buttons">
-            <button class="encriptar" onclick="cifrar_texto()"> <p class="text">Encriptar</p> </button>
-            <button class="desencriptar" onclick="descifrar_texto()"><p class="text">Desencriptar</p></button>
-        </div>
+            <div class="laptop">
+                <img class="logo" src="imagenes/vector.png" alt="logo-alura">
+                <div class="entrada">
+                    <textarea class="text" id="texto_entrada-p" placeholder="Escribe aquí tu mensaje..."></textarea>
+                </div>
+                <div class="rectangulo">
+                    <div id="vacio-p">
+                        <img class="muneco" src="imagenes/muneco.png" alt="muneco">
+                        <p class="text" id="texto_vacio">Ningun mensaje fue encontrado</p>
+                        <p class="text" id="texto_sugerencia">Ingrese el texto que desee encriptar o desencriptar</p>
+                    </div>
+                    <div id="contenido-p">
+                        <div class="resultado">
+                            <p class="text" id="texto_resultado-p"></p>
+                        </div>
+                        <div class="buttons">
+                            <button class="copiar" onclick="copiar()"><p class="text">copiar</p></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="advisor">
+                    <p class="text" id="recomendacion">&#9888;  Ten cuidado con los acentos</p>
+                </div>
+                <div class="buttons">
+                    <button class="encriptar" onclick="cifrar_texto()"> <p class="text">Encriptar</p> </button>
+                    <button class="desencriptar" onclick="descifrar_texto()"><p class="text">Desencriptar</p></button>
+                </div>
+            </div>
+            <div class="movil">
+                <h1 class="text" id="proximamente">EN DESARROLLO......</h1>
+                <img id="imagen" src="imagenes/learn-coding.png">
+            </div>
+            <div class="pantallas_grandes">
+                <h1 class="text" id="proximamente">EN DESARROLLO......</h1>
+                <img id="imagen" src="imagenes/learn-coding.png">
+            </div>
+        </di>
     </body>
 </html>
+<!--Desarrollado por luis castiblanco -->
