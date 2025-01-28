@@ -121,3 +121,4 @@ window.addEventListener("resize", function() {
 
 // Desarrollado por luis castiblanco 
 
+let prueba;
